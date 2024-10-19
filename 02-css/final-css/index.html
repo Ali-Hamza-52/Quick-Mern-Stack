@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/nav.css" />
+  <link rel="stylesheet" href="./css/main.css" />
+
+  <!-- Font awesome CDN-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <nav class="navbar flex px-20 py-10">
+    <img src="./public/svgs/icon-dashboard.svg" alt="" />
+  </nav>
+
+  <div class="main gap-10">
+    <div class="user-menu">
+      <div class="user-detail px-30 py-20 flex gap-10">
+        <img src="./public/images/profile.png" alt="" />
+
+        <div class="user-info text-xl flex flex-col item-center gap-10">
+          <p class="text-2xl">Welcome <span>Ali</span></p>
+
+          <div class="flex gap-5">
+            <i class="px-15 py-10 fa-solid fa-envelope"></i>
+            <i class="px-15 py-10 fa-solid fa-user"></i>
+            <i class="px-15 py-10 fa-solid fa-gear"></i>
+          </div>
+        </div>
+      </div>
+
+      <hr class="user-menu-close" />
+
+      <div class="user-nav-list py-25">
+        <h3 class="px-15">Dashboard</h3>
+
+        <div class="sidebar flex flex-col mt-20 gap-10">
+          <a href="#" class="active"><i class="px-15 py-10 fas fa-users"></i> Overview</a>
+          <a href="#"><i class="px-15 py-10 fas fa-eye"></i> Views</a>
+          <a href="#"><i class="px-15 py-10 fas fa-users"></i> Traffic</a>
+          <a href="#"><i class="px-15 py-10 fas fa-bullseye"></i> Geo</a>
+          <a href="#"><i class="px-15 py-10 fas fa-gem"></i> Orders</a>
+          <a href="#"><i class="px-15 py-10 fas fa-bell"></i> News</a>
+          <a href="#"><i class="px-15 py-10 fas fa-landmark"></i> General</a>
+          <a href="#"><i class="px-15 py-10 fas fa-history"></i> History</a>
+          <a href="#"><i class="px-15 py-10 fas fa-cog"></i> Settings</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="user-dashboard flex flex-col gap-15 pt-30 px-15">
+      <h4><i class="fa-solid fa-gauge text-2xl"></i> My Dashboard</h4>
+
+      <div class="user-cards gap-10">
+        <div class="py-30 px-15">
+          <div class="flex justify-between pb-15">
+            <i class="fa-solid text-4xl fa-comment"></i>
+            <label class="text-2xl">52</label>
+          </div>
+          <p class="text-2xl">Message</p>
+        </div>
+        <div class="py-30 px-15">
+          <div class="flex justify-between pb-15">
+            <i class="fa-regular text-4xl fa-eye"></i>
+            <label class="text-2xl">99</label>
+          </div>
+          <p class="text-2xl">Views</p>
+        </div>
+        <div class="py-30 px-15">
+          <div class="flex justify-between pb-15">
+            <i class="fa-solid text-4xl fa-share-nodes"></i>
+            <label class="text-2xl">23</label>
+          </div>
+          <p class="text-2xl">Message</p>
+        </div>
+        <div class="py-30 px-15">
+          <div class="flex justify-between pb-15">
+            <i class="fa-solid text-4xl fa-users"></i>
+            <label class="text-2xl">50</label>
+          </div>
+          <p class="text-2xl">Message</p>
+        </div>
+      </div>
+
+      <div class="overview flex gap-15">
+        <div>
+          <h4 class="pb-10">Region</h4>
+          <img src="./public/images/map.png" alt="" />
+        </div>
+        <div class="table-feed">
+          <h4 class="pb-10">Feeds</h4>
+          <table>
+            <tr class="py-10 px-15">
+              <td class="icon"><i class="fas fa-user"></i></td>
+              <td>New record, over 90 views.</td>
+              <td class="time">10 mins</td>
+            </tr>
+            <tr class="py-10 px-15">
+              <td class="icon"><i class="fas fa-bell"></i></td>
+              <td>Database error.</td>
+              <td class="time">15 mins</td>
+            </tr>
+            <tr class="py-10 px-15">
+              <td class="icon"><i class="fas fa-users"></i></td>
+              <td>New record, over 40 users.</td>
+              <td class="time">17 mins</td>
+            </tr>
+            <tr class="py-10 px-15">
+              <td class="icon"><i class="fas fa-comment"></i></td>
+              <td>New comments.</td>
+              <td class="time">25 mins</td>
+            </tr>
+            <tr class="py-10 px-15">
+              <td class="icon"><i class="fas fa-bookmark"></i></td>
+              <td>Check transactions.</td>
+              <td class="time">28 mins</td>
+            </tr>
+            <tr class="py-10 px-15">
+              <td class="icon"><i class="fas fa-desktop"></i></td>
+              <td>CPU overload.</td>
+              <td class="time">35 mins</td>
+            </tr>
+            <tr class="py-10 px-15">
+              <td class="icon"><i class="fas fa-share-alt"></i></td>
+              <td>New shares.</td>
+              <td class="time">39 mins</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="general flex flex-col gap-20">
+        <h4>General Stats</h4>
+        <p>Bounce Rate</p>
+        <div class="first">
+          <div class="py-15">25%</div>
+        </div>
+        <p>New Users</p>
+        <div class="second">
+          <div class="py-15">50%</div>
+        </div>
+        <p>Bounce Rate</p>
+        <div class="third">
+          <div class="py-15">75%</div>
+        </div>
+      </div>
+
+      <div class="countries">
+        <h4>Countries</h4>
+        <table>
+          <tr class="py-10 px-15">
+            <td>United States</td>
+            <td>65%</td>
+          </tr>
+          <tr class="py-10 px-15">
+            <td>UK</td>
+            <td>22%</td>
+          </tr>
+          <tr class="py-10 px-15">
+            <td>Russia</td>
+            <td>2%</td>
+          </tr>
+          <tr class="py-10 px-15">
+            <td>Spain</td>
+            <td>98%</td>
+          </tr>
+          <tr class="py-10 px-15">
+            <td>India</td>
+            <td>1%</td>
+          </tr>
+          <tr class="py-10 px-15">
+            <td>Pakistan</td>
+            <td>0%</td>
+          </tr>
+        </table>
+        <button>More Countries <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+
+      <div>
+        <h4 class="pt-10 py-10">Recent Users</h4>
+        <div class="profile flex gap-25 item-center">
+          <img src="./public/images/profile.png" alt="">
+          <h3>Mike</h3>
+        </div>
+        <div class="profile flex gap-25 item-center">
+          <img src="./public/images/profile.png" alt="">
+          <h3>Mike</h3>
+        </div>
+        <div class="profile flex gap-25 item-center">
+          <img src="./public/images/profile.png" alt="">
+          <h3>Mike</h3>
+        </div>
+
+
+
+
+      </div>
+
+      <div>
+        <h4>Recent Comments</h4>
+
+        <div class="comment-user-card item-center flex gap-30">
+          <img class="mt-25" src="./public/images/profile.png" alt="">
+          <div class="flex flex-col gap-10">
+
+            <h4>John <span>sep 29,2014, 9:12 PM</span></h4>
+            <p>Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+        <div class="comment-user-card item-center flex gap-30">
+          <img class="mt-25" src="./public/images/profile.png" alt="">
+          <div class="flex flex-col gap-10">
+
+            <h4>John <span>sep 29,2014, 9:12 PM</span></h4>
+            <p>Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer flex gap-30 px-30 py-30">
+
+        <div class="text-3xl flex flex-col gap-10">
+          <h5>Demographic</h5>
+          <hr>
+          <p>Language</p>
+          <p>Country</p>
+          <p>City</p>
+        </div>
+        <div class="text-3xl flex flex-col gap-10">
+          <h5>System</h5>
+          <hr>
+          <p>Browser</p>
+          <p>OS</p>
+          <p>More</p>
+        </div>
+        <div class="text-3xl flex flex-col gap-10">
+          <h5>Target</h5>
+          <hr>
+          <p>User</p>
+          <p>Geo</p>
+          <p>Active</p>
+          <p>Interests</p>
+        </div>
+
+      </div>
+
+    </div>
+</body>
+
+</html>

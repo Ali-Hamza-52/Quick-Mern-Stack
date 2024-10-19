@@ -1,0 +1,12 @@
+.navbar{
+    background: #000;
+    justify-content: end;
+    position: sticky;
+    top: 0px;
+}
+
+.navbar > img {
+    width: 30px;
+    height: 30px;
+}
+
