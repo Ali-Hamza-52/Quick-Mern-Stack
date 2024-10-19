@@ -15,6 +15,7 @@
 
 
 .user-menu {
+    display: none;
     width: 20%;
     background-color: #ffffff;
     height: 100vh;
@@ -25,7 +26,6 @@
 .user-dashboard {
     width: 80%;
     background-color: #f1f1f1;
-    margin-left: 20%;
 }
 
 .user-detail>img {
@@ -63,7 +63,7 @@
 
 .user-cards {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(1, 1fr);
 }
 
 .user-cards>div:nth-child(1) {
