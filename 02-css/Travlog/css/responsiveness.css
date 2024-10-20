@@ -1,0 +1,46 @@
+
+@media (min-width: 640px) {
+
+    .sm\:p-5 { padding: 5px; }
+    .sm\:p-10 { padding: 10px; }
+    .sm\:m-5 { margin: 5px; }
+    .sm\:m-10 { margin: 10px; }
+    .sm\:flex-row { flex-direction: row; }
+    .sm\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+}
+.md\:gap-50{ gap: 50px;}
+
+@media (min-width: 768px) {
+    
+    .md\:block{ display: block;}
+    .md\:p-5 { padding: 5px; }
+    .md\:nav-link{ gap: 50px; }
+    .md\:p-10 { padding: 10px; }
+    .md\:m-5 { margin: 5px; }
+    .md\:m-10 { margin: 10px; }
+    .md\:flex-row { flex-direction: row; }
+    .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+}
+
+@media (min-width: 1024px) {
+
+    .lg\:p-5 { padding: 5px; }
+    .lg\:p-10 { padding: 10px; }
+    .lg\:m-5 { margin: 5px; }
+    .lg\:m-10 { margin: 10px; }
+    .lg\:flex-row { flex-direction: row; }
+    .lg\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+}
+
+@media (min-width: 1280px) {
+
+    .xl\:p-5 { padding: 5px; }
+    .xl\:p-10 { padding: 10px; }
+    .xl\:m-5 { margin: 5px; }
+    .xl\:m-10 { margin: 10px; }
+    .xl\:flex-row { flex-direction: row; }
+    .xl\:grid-cols-6 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+}

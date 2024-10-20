@@ -1,0 +1,30 @@
+nav{
+    background-image: radial-gradient(farthest-side  at 0px 0px ,#ffdbcf,#ffffff); 
+}
+
+.nav-link > a{
+    color: #8c8b92;
+}
+
+.nav-link a:first-child {
+    color: black;
+}
+
+
+
+.auth-btn button:first-child:hover{
+    border-radius: 50px;
+    background-color: aqua;
+}
+
+
+.auth-btn button:nth-child(2){
+    border-radius: 50px;
+    color: white;
+    background-color: #5d50c6;
+}
+
+.auth-btn button:nth-child(2):hover{
+    border-radius: 50px;
+    background-color: #9084ee;
+}

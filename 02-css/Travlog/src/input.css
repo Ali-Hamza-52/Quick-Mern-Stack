@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.radial-gradient {
+    background-image: radial-gradient(farthest-side at 10%  0%, #ffdacf 10%, #fffdfd 70%, #fff8e7 5%);
+}
+.nav-radial-gradient {
+    background-image: radial-gradient(farthest-side at 0%  0%, #ffdacf 100%, #fffdfd 5%);
+}
