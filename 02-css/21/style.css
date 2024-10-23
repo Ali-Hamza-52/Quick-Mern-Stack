@@ -1,0 +1,94 @@
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+nav{
+    background: rgba(34, 34, 34);
+    padding:0px 50px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+nav div{
+    display: flex;
+    gap: 30px;
+}
+
+a{
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
+    padding: 10px 20px;
+
+    &:hover{
+        background-color: black;
+    }
+
+    &:active{
+        background-color: rgb(11, 148, 11);
+    }
+}
+
+@media screen and (max-width:768px) {
+    nav, nav div{
+        padding: 0px;
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+}
+
+
+    /* 
+    .card , .card >img{
+        width: 300px;
+        height: 350px;
+    }
+
+    .card{
+        position: relative;
+    }
+
+    .content{
+        display: none;
+        position: absolute;
+        bottom: 0px;
+        background-color: rgba(0, 0, 0, 0.499);
+        width: 100%;
+        color: white;
+        padding: 10px;
+    }
+
+    .card:hover > .content{
+        display: block;
+    } */
+
+
+/* .main{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.main > img {
+    width: 100%;
+    height: 99vh;
+}
+
+.flex{
+    padding: 200px;
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    background-color: rgba(0, 0, 0, 0.336);
+    color: white;
+} */
