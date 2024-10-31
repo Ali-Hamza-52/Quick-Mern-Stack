@@ -1,0 +1,28 @@
+<script>
+
+    function customSqrt(value) {
+      if (value < 0) return NaN;
+      if (value === 0 || value === 1) return value;
+  
+      let guess = value / 2;
+      let error = 0.00001;
+  
+    
+      while (Math.abs(guess * guess - value) > error) {
+        guess = (guess + value / guess) / 2;
+      }
+      return guess;
+    }
+  
+    let value = Number(prompt("Enter a non-negative value"));
+  
+
+    if (isNaN(value) || value < 0) {
+      console.log("Please enter a valid non-negative number.");
+    } else {
+    
+      let sqrt = customSqrt(value);
+      console.log("Square root of the given value is: ", sqrt);
+    }
+  </script>
+  
