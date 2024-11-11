@@ -1,0 +1,259 @@
+<script>
+  // three ways to declare variables
+  /*
+    let -> value access,change any time 
+    var -> value access,change any time
+    const -> value access but can't be changed
+    */
+  /*
+        Scopes
+            //where we use variables
+        function scope
+        block scope
+            if,loops
+        global scope
+        {
+            let number;
+        }
+    */
+
+  // 3 ways to display value
+  /*
+          console.log(value);
+          alert("This is alert")
+          document.write()
+    */
+
+  //Variables
+  /*
+          How to declare variables
+              let = change value when we need
+              var = change value when we need
+              const = Never Changed
+
+              //declaration
+              let variableName;
+              var variableName;
+
+              // Value Assignments
+              variableName = value;
+
+              //Initialization
+              let variableName = value;
+              var variableName = value;
+
+              // Constant initialization
+              const VARIABLE_NAME = value;              
+
+              // Variables Naming Rule
+              let _name = "Ali";
+              let $name = "Ali";
+              let name = "Ali";
+              let NAME = "Ali";
+              let name1 = "Ali";
+              let firstName = "Ali";
+
+              //We Cannot use Reserved Keywords
+
+              // Reserved are reserved by language we cannot use it as a
+              variable name
+
+              // Examples
+              let let = "Ali";
+              let var = "Ali";
+              let return = "Ali";
+              let break = "Ali";
+              let continue = "Ali";
+              let if = "Ali";
+              let else = "Ali";
+              let switch = "Ali";
+              let while = "Ali";
+              let do = "Ali";
+              let for = "Ali";
+              let in = "Ali";
+              let typeof = "Ali";
+              let finally = "Ali";
+      */
+  // Data Types
+  /*
+  1: Primitive data types
+    // we not store any refrence
+    String : let name = "ali";
+    Number : let age = 22;
+    Boolean : let isTeenage = true;
+    Null : let address = null;
+    Undefined : let age;
+    Symbol : let symbol = Symbol("Greeting");
+          let name = "Ali";
+          let age = 25;
+          let isMarried = true;
+          let address = null;
+          let greeting;
+          let symbol = Symbol("Greeting");
+          
+
+  2: Non primitive data types
+    Object : const person = {name: "ali", age: 22};
+    Array : let marks = [1,2,3,4,5]
+    const person = {
+              name: "Ali",
+              age: 25,
+              address: {
+                  street: "Street",
+                  city: "City"
+              }
+          };
+      */
+
+  // Type Coercion (Type Casting)
+  /*
+      // String to Number
+          let name = "25";
+          let age = Number(name);
+          console.log(age);
+
+          // Number to String
+          let age = 25;
+          let name = String(age);
+          let name1 = age.toString();
+          console.log(name);
+
+          // Boolean to Number
+          let isMarried = true;
+          let isTeenage = Boolean(isMarried);
+          console.log(isTeenage);
+      */
+
+  /*
+        how to take input from user
+        1: prompt            
+        2: forms
+    */
+
+  // let num1 = prompt("Enter first number ");
+  // num1 = Number(num1)
+  // let num2 = prompt("Enter second number ");
+  // num2 = Number(num2)
+
+  // let sum = num1 + num2;
+
+  // console.log("Sum: ",sum)
+
+  /*
+    Program General Procedure
+    */
+  // varibles
+  // input
+  // processing
+  // output
+
+  //   take 4 numbers from user and tell us which number is greater and smaller
+
+  // 20,10,5,25
+
+  // small is 5
+  // large is 25
+
+  /*
+    inputs
+        num1,num2,num3,num4
+    processing
+        large number 
+        small number
+    output
+        result how which number is small and greater
+  */
+  let num1 = prompt("Enter first number ");
+  num1 = Number(num1);
+  let num2 = prompt("Enter Second number ");
+  num2 = Number(num2);
+  let num3 = prompt("Enter Third number ");
+  num3 = Number(num3);
+  let num4 = prompt("Enter Fourth number ");
+  num4 = Number(num4);
+
+  if (num1 > num2 && num1 > num3 && num1 > num4) {
+    console.log("This number is largest ", num1);
+  } else if (num2 > num3 && num2 > num4) {
+    console.log("This number is largest ", num2);
+  } else if (num3 > num4) {
+    console.log("This number is largest ", num3);
+  } else {
+    console.log("This number is largest ", num4);
+  }
+  if (num1 < num2 && num1 < num3 && num1 < num4) {
+    console.log("This number is smallest ", num1);
+  } else if (num2 < num3 && num2 < num4) {
+    console.log("This number is smallest ", num2);
+  } else if (num3 < num4) {
+    console.log("This number is smallest ", num3);
+  } else {
+    console.log("This number is smallest ", num4);
+  }
+  
+  /*
+    Selection Structure || Flow Control
+        1: if 
+        2: if else
+        3: if else if
+        4: switch
+        5: Conditional
+    
+    Operators
+        1: Arithematic Operators
+            + , - , / , * , %
+        2: Relational Operators
+            > , < , >= , <= , == , === , !=
+        3: Logical Operators
+            && , || , ! 
+        4: Assignment Operators
+            =
+
+
+        Syntax
+            let varibleName;
+            let variableName = value;
+            console.log("Message",variable);
+            alert("Message");
+            prompt("Message")
+
+            
+            if(age >= 18){
+                // Illegible for cnic
+            }
+
+            if(age < 18){
+                // Not Illegible for cnic
+            }
+            
+
+            if(age >= 18){
+                // Illegible for cnic
+            }else{
+                // Not illegible for cnic
+            }
+
+            if(condition){
+            
+            }else if(condition){
+            
+            }else if(condition){
+            
+            }else{
+            
+            }
+
+            if(numberOfDay == 1){
+                today is monday
+            }else if(numberOfDay == 2){
+                today is tuesday
+            }else if(numberOfDay === 3){
+                ...
+            } ... {
+            
+            }else{
+                // invalid number
+            }
+            
+  */
+</script>
