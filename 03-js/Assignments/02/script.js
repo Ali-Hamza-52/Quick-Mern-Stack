@@ -75,3 +75,130 @@
 // } else {
 //   alert("Oops your answer is wrong");
 // }
+
+// The area of a rectangle is the rectangle’s length times its width. Write a program that asks
+// for the length and width of two rectangles. The program should tell the user which rectan
+// gle has the greater area, or if the areas are the same.
+
+// let length1 = parseInt(prompt("Enter the length of first rectangle "));
+// let width1 = parseInt(prompt("Enter the width of first rectangle "));
+
+// let length2 = parseInt(prompt("Enter the length of second rectangle "));
+// let width2 = parseInt(prompt("Enter the width of second rectangle "));
+
+// let area1 = length1 * width1;
+// let area2 = length2 * width2;
+
+// if (area1 > area2) {
+//   console.log(`First Rectangle is larger its length is ${length1} * ${width1} = ${area1}`);
+//   console.log(`Second Rectangle is samller its length is ${length2} * ${width2} = ${area2}`);
+// } else if (area2 > area1) {
+//     console.log(`Second Rectangle is larger its length is ${length2} * ${width2} = ${area2}`);
+//     console.log(`First Rectangle is samller its length is ${length1} * ${width1} = ${area1}`);
+// } else {
+//   console.log("Both are equal");
+// }
+
+// ​‌‌‍⁡⁢⁣⁢Time Calculator⁡​
+//  Write a program that asks the user to enter a number of seconds.
+// • There are 86400 seconds in a day. If the number of seconds entered by the user is
+//  greater than or equal to 86400, the program should display the number of days in
+//  that many seconds.
+//  • There are 3600 seconds in an hour. If the number of seconds entered by the user is
+//  less than 86400, but is greater than or equal to 3600, the program should display the
+//  number of hours in that many seconds.
+//  • There are 60 seconds in a minute. If the number of seconds entered by the user is less
+//  than 3600, but is greater than or equal to 60, the program should display the number
+//  of minutes in that many seconds.
+
+// let seconds = parseInt(prompt("Enter a number of seconds."))
+
+// let days=0;
+// let hour=0;
+// let minutes=0;
+
+// just for logics
+// days = parseInt(seconds /86400) //typecasting float to int
+// seconds = seconds % 86400
+// console.log("days",days)
+// console.log("seconfs",seconds)
+
+// if(seconds >= 86400){
+//     days = Math.floor(seconds/86400);
+//     seconds = seconds % 86400;
+//     hour = Math.floor(seconds/3600);
+//     seconds = seconds % 3600;
+//     minutes = Math.floor(seconds/60);
+//     seconds = seconds % 60;
+
+//     console.log("Days : Hours : Minutes : Seconds" )
+//     console.log(`${days}    : ${hour}     : ${minutes}      : ${seconds}`)
+// }else if(seconds >= 3600  && seconds < 86400){
+//     hour = Math.floor(seconds/3600);
+//     seconds = seconds % 3600;
+//     minutes = Math.floor(seconds/60);
+//     seconds = seconds % 60;
+
+//     console.log("Days : Hours : Minutes : Seconds" )
+//     console.log(`${days}    : ${hour}     : ${minutes}      : ${seconds}`)
+
+// }else if(seconds >= 60  && seconds < 3600){
+//     minutes = Math.floor(seconds/60);
+//     seconds = seconds % 60;
+
+//     console.log("Days : Hours : Minutes : Seconds" )
+//     console.log(`${days}    : ${hour}     : ${minutes}      : ${seconds}`)
+
+// }else{
+//     console.log("Days : Hours : Minutes : Seconds" )
+//     console.log(`${days}    : ${hour}     : ${minutes}      : ${seconds}`)
+//     console.log("Days : Hours : Minutes : Seconds" )
+//     console.log(`${days}    : ${hour}     : ${minutes}      : ${seconds}`)
+// }
+
+// Running the Race
+// Write a program that asks for the names of three runners and the time it took each of them
+//  to finish a race. The program should display who came in first, second, and third place.
+//  Think about how many test cases are needed to verify that your problem works correctly.
+//  (That is, how many different finish orders are possible?)
+//  Input Validation: Only accept positive numbers for the times.
+
+// let player1 = prompt("Enter Frist Player Name");
+// let time1 = Number(prompt("Enter the time First player took"));
+
+// let player2 = prompt("Enter Two Player Name");
+// let time2 = Number(prompt("Enter the time Second player took"));
+
+// let player3 = prompt("Enter Third Player Name");
+// let time3 = Number(prompt("Enter the time Third player took"));
+
+// if (time1 < time2 && time1 < time3) {
+//   console.log(`This is First ${player1}`);
+//   if (time2 < time3) {
+//     console.log(`This is Second ${player2}`);
+//     console.log(`This is Third ${player3}`);
+//   } else {
+//     console.log(`This is Second ${player3}`);
+//     console.log(`This is Third ${player2}`);
+//   }
+// } else if (time2 < time3 && time2 < time1) {
+//   console.log(`This is First ${player2}`);
+//   if (time3 < time1) {
+//     console.log(`This is Second ${player3}`);
+//     console.log(`This is Third ${player1}`);
+//   } else {
+//     console.log(`This is Second ${player1}`);
+//     console.log(`This is Third ${player3}`);
+//   }
+// } else {
+//   console.log(`This is First ${player3}`);
+//   if (time2 < time1) {
+//     console.log(`This is Second ${player2}`);
+//     console.log(`This is Third ${player1}`);
+//   } else {
+//     console.log(`This is Second ${player1}`);
+//     console.log(`This is Third ${player2}`);
+//   }
+// }
+
+
