@@ -51,12 +51,13 @@
 //   } else {
 //     fee = fee + lastMonthChecks * 0.04;
 //   }
+//   console.log("Total Fee is $", fee);
 // } else {
 //   console.log("Don't allow negitive number");
 // }
 
-let num1 = Math.floor(Math.random() * 40) + 10;
-let num2 = Math.floor(Math.random() * 40) + 10;
+// let num1 = Math.floor(Math.random() * 40) + 10;
+// let num2 = Math.floor(Math.random() * 40) + 10;
 
 // document.write(`<h1 style="color:blue;">The first numbers is ${num1}</h1>`);
 // document.write(`<br />`);
@@ -65,12 +66,12 @@ let num2 = Math.floor(Math.random() * 40) + 10;
 //   `<h1 style="color:blue;">Calculate the sum of following and answer </h1>`
 // );
 
-console.log("num1 is ",num1)
-console.log("num2 is ",num2)
-let sum = Number(prompt("Enter the sum of random generated number"));
+// console.log("num1 is ",num1)
+// console.log("num2 is ",num2)
+// let sum = Number(prompt("Enter the sum of random generated number"));
 
-if ((num1 + num2) == sum) {
-  alert("Congralations your answer is right");
-} else {
-  alert("Oops your answer is wrong");
-}
+// if ((num1 + num2) == sum) {
+//   alert("Congralations your answer is right");
+// } else {
+//   alert("Oops your answer is wrong");
+// }
