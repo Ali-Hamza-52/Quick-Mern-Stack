@@ -1,0 +1,15 @@
+let alphabate = prompt("Enter any alphabate");
+console.log("alphabate", alphabate);
+console.log("alphabate", typeof alphabate);
+console.log("Uppercase of Alphabates is: ", alphabate.toUpperCase());
+console.log("Lowercase of Alphabates is: ", alphabate.toLowerCase());
+console.log("Index of Alphabates is: ", alphabate.indexOf("n"));
+console.log("Index of Alphabates is: ", alphabate.endsWith("n"));
+console.log("Index of Alphabates is: ", alphabate.endsWith("n"));
+console.log("Last Index of Alphabates is: ", alphabate.lastIndexOf("s"));
+console.log("Last Index of Alphabates is: ", alphabate.trim());
+console.log("Replace of Alphabates is: ", alphabate.replaceAll("a","v"));
+console.log("Includes of Alphabates is: ", alphabate.includes("a"));
+console.log("Concatination of Alphabates is: ", alphabate.concat(" Ali"));
+console.log("Concatination of Alphabates is: ", ("Mr. "+alphabate));
+console.log("length of string is: ", alphabate.length);

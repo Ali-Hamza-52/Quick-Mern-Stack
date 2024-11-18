@@ -201,4 +201,20 @@
 //   }
 // }
 
+let char = prompt("Enter a single character:").toLowerCase();
 
+if (char.length === 1 && /[a-z]/.test(char)) {
+  if (
+    char === "a" ||
+    char === "e" ||
+    char === "i" ||
+    char === "o" ||
+    char === "u"
+  ) {
+    console.log("The character is a vowel.");
+  } else {
+    console.log("The character is a consonant.");
+  }
+} else {
+  console.log("Invalid input. Please enter a single alphabetic character.");
+}
