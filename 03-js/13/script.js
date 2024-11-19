@@ -42,25 +42,15 @@ if (choice >= 1 && choice <= 3) {
   let distance = parseInt(prompt("Enter the distance in feets: "));
   if (distance > 0) {
     if (choice === 1) {
-
-      alert(`The total sound in this is ${airSound * distance}`);
-    
+      alert(`The total sound in this is ${distance / airSound}`);
     } else if (choice === 2) {
-
-      alert(`The total sound in this is ${waterSound * distance}`);
-    
+      alert(`The total sound in this is ${distance / waterSound}`);
     } else {
-
-      alert(`The total sound in this is ${steelSound * distance}`);
-    
+      alert(`The total sound in this is ${distance / steelSound}`);
     }
   } else {
-
     alert("Distance must be greate then 0");
-  
-}
+  }
 } else {
-
   alert("Please Enter Correct menu medium");
-
 }
