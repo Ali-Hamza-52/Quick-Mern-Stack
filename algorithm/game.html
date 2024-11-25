@@ -1,0 +1,1511 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prediction Algorithm</title>
+  </head>
+  <body>
+    <h1>Prediction Algorithm</h1>
+    <div id="prediction"></div>
+
+    <script>
+      // Historical Dataset
+      const historicalData = [
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "small",
+        },
+        {
+          value: "small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "small",
+        },
+        {
+          value: "Big",
+        },
+        {
+          value: "small",
+        },
+        {
+          value: "small",
+        },
+        {
+          value: "small",
+        },
+        {
+          value: "Small",
+        },
+      ];
+      // Historical data (previous days)
+      const realTimeData = [
+        { value: "Big" },
+        { value: "Small" },
+        { value: "Big" },
+        { value: "Small" },
+        { value: "Small" },
+        { value: "Small" },
+        { value: "Small" },
+        { value: "Small" },
+        {value: "Small" },
+        { value: "Big" },
+      ];
+
+      function predictNextOutcome(historical, realTime) {
+        // Combine historical and real-time data
+        const combinedData = [...historical, ...realTime];
+
+        // Step 1: Count Frequencies
+        let bigCount = 0;
+        let smallCount = 0;
+
+        combinedData.forEach((entry) => {
+          if (entry.value === "Big") {
+            bigCount++;
+          } else if (entry.value === "Small") {
+            smallCount++;
+          }
+        });
+
+        console.log(`Big Count: ${bigCount}, Small Count: ${smallCount}`);
+
+        // Step 2: Analyze the last few outcomes
+        const lastOutcomes = combinedData.map((entry) => entry.value).slice(-3); // Get the last 3 outcomes
+        console.log(`Last Outcomes: ${lastOutcomes.reverse()}`);
+
+        // Step 3: Make Prediction
+        let prediction;
+        if (lastOutcomes[2] === "Small" && lastOutcomes[1] === "Small") {
+          prediction = "Big"; // If the last two were Small, predict Big
+        } else if (lastOutcomes[2] === "Big" && lastOutcomes[1] === "Big") {
+          prediction = "Small"; // If the last two were Big, predict Small
+        } else {
+          // Default prediction based on frequency
+          prediction = bigCount > smallCount ? "Big" : "Small";
+        }
+
+        return prediction;
+      }
+
+      // Run the prediction
+      const nextOutcomePrediction = predictNextOutcome(
+        historicalData,
+        realTimeData.reverse()
+      );
+      console.log(`Predicted Next Outcome: ${nextOutcomePrediction}`);
+    </script>
+  </body>
+</html>
